@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"recipient": "the address to receive your tokens",
+						"tokenAddress": "the deployed NaughtCoin contract"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/transfer_tokens.sol": "NaughtCoinStealer"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/transfer_tokens.sol": {
+			"keccak256": "0xc99cd3de452229c619f3c11a4e103ede6aac1b8c87715d1efe8a94b8c7bbc039",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82aa986f4f7e08bf01bab71050eaeb6f0417fa087bf0c81ab284ed5fb4aeb5bc",
+				"dweb:/ipfs/QmbAwAc13EGNTPUrrDBc1LCrPxHAxaLGQj3NkcqjskVyLk"
+			]
+		}
+	},
+	"version": 1
+}

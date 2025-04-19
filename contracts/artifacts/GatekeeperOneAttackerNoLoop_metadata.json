@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_gate",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gate",
+				"outputs": [
+					{
+						"internalType": "contract IGatekeeperOne",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/gatekepper.sol": "GatekeeperOneAttackerNoLoop"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/gatekepper.sol": {
+			"keccak256": "0x158c668c21b5e85e7484974bb10a2b4e405e0d3bacc3faa3c08a836973a1b529",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://962c1edab00add1fde33af984c7ff52b36e9ca00fc5d9bd6351e77e7da97686f",
+				"dweb:/ipfs/QmdVu4afjVtQH3FqN2yQABgT9C6hmhqzZG6h1LrcJzBjxW"
+			]
+		}
+	},
+	"version": 1
+}

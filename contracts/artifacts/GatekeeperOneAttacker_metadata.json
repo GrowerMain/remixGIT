@@ -1,0 +1,102 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_gate",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "entrant",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gate",
+				"outputs": [
+					{
+						"internalType": "contract IGatekeeperOne",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"attack()": {
+					"returns": {
+						"_0": "true if we managed to pass all gates and set the entrant"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/gatekepper.sol": "GatekeeperOneAttacker"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/gatekepper.sol": {
+			"keccak256": "0xa5057748ad86baa1052a02d82eacf87bf85f59d189f8fe6bbc0ac0c78d17c182",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0779e1a515c8ca8846e18d9a72a4541c88ea6b825cff09ecbffcab92a1ef362f",
+				"dweb:/ipfs/QmNtUawt1VzdZqWAUXJ8ZCTfYrPQXb4AkxYKL2EK4gpk9V"
+			]
+		}
+	},
+	"version": 1
+}
