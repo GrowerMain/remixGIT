@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/recovery.sol": "ISimpleToken"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/recovery.sol": {
+			"keccak256": "0xfe4242e81541302773b7ab1e909aaee2864f1fe1755a64979e056da6f778e61d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d9f16c971cf9b133548fead4634f91548d5814d40ae55e5383a032031140b201",
+				"dweb:/ipfs/QmSgtP4sNDxtMTQADNm3cyjpJ5Ew2nsiMrZEG7s1ue4gry"
+			]
+		}
+	},
+	"version": 1
+}

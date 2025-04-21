@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_time",
+						"type": "uint256"
+					}
+				],
+				"name": "setTime",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/predervation.sol": "MaliciousLibrary"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/predervation.sol": {
+			"keccak256": "0x0c67d004107d53905261700bed0d66a573ab610c8e64041065ea95c124e03ec5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce9cdd683dd6e4100271ea6dbde40014ce27e308e865b97cffe980df8a0ec1cd",
+				"dweb:/ipfs/QmeAqbJGNdnfqcT3qAUu9za1TXaQbKLhoZS7orfrv9Gx6h"
+			]
+		}
+	},
+	"version": 1
+}

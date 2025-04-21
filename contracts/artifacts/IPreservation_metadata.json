@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_timeStamp",
+						"type": "uint256"
+					}
+				],
+				"name": "setFirstTime",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/predervation.sol": "IPreservation"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/predervation.sol": {
+			"keccak256": "0x5c4644f8953451dd6c1746c87ec48567e188210280a4e6ba898e8bf5db1b3af2",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://aa44f86e10831761177ceec405a711954d6c5e35b81d3010a26dbb7475c10aff",
+				"dweb:/ipfs/QmXD2dqi6cxXaj6cYXYt5zQnPsbXYZc44xrLsHR8cV8pYe"
+			]
+		}
+	},
+	"version": 1
+}
