@@ -17,11 +17,6 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "ERC721EnumerableForbiddenBatchMint",
-				"type": "error"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -122,22 +117,6 @@
 					}
 				],
 				"name": "ERC721NonexistentToken",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "ERC721OutOfBoundsIndex",
 				"type": "error"
 			},
 			{
@@ -303,6 +282,12 @@
 						"internalType": "uint256",
 						"name": "weight",
 						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
 					}
 				],
 				"name": "RarityAdded",
@@ -328,6 +313,12 @@
 						"internalType": "uint256",
 						"name": "weight",
 						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
 					}
 				],
 				"name": "RarityUpdated",
@@ -395,6 +386,11 @@
 						"internalType": "uint256",
 						"name": "weight",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
 					}
 				],
 				"name": "addRarity",
@@ -547,7 +543,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
 				"name": "mintWithUSDT",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -617,6 +619,11 @@
 						"internalType": "uint256",
 						"name": "weight",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -744,51 +751,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "tokenByIndex",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "tokenIdCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "tokenOfOwnerByIndex",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -832,19 +796,6 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalSupply",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -915,6 +866,11 @@
 						"internalType": "uint256",
 						"name": "weight",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
 					}
 				],
 				"name": "updateRarity",
@@ -964,11 +920,6 @@
 		],
 		"devdoc": {
 			"errors": {
-				"ERC721EnumerableForbiddenBatchMint()": [
-					{
-						"details": "Batch mint is not allowed."
-					}
-				],
 				"ERC721IncorrectOwner(address,uint256,address)": [
 					{
 						"details": "Indicates an error related to the ownership over a particular token. Used in transfers.",
@@ -1036,11 +987,6 @@
 						}
 					}
 				],
-				"ERC721OutOfBoundsIndex(address,uint256)": [
-					{
-						"details": "An `owner`'s token query was out of bounds for `index`. NOTE: The owner being `address(0)` indicates a global out of bounds index."
-					}
-				],
 				"FailedCall()": [
 					{
 						"details": "A call to an address target failed. The target may have reverted."
@@ -1087,6 +1033,11 @@
 				"isApprovedForAll(address,address)": {
 					"details": "See {IERC721-isApprovedForAll}."
 				},
+				"mintWithUSDT(uint256)": {
+					"params": {
+						"amount": "total USDT to spend (any remainder refunded)"
+					}
+				},
 				"name()": {
 					"details": "See {IERC721Metadata-name}."
 				},
@@ -1114,17 +1065,8 @@
 				"symbol()": {
 					"details": "See {IERC721Metadata-symbol}."
 				},
-				"tokenByIndex(uint256)": {
-					"details": "See {IERC721Enumerable-tokenByIndex}."
-				},
-				"tokenOfOwnerByIndex(address,uint256)": {
-					"details": "See {IERC721Enumerable-tokenOfOwnerByIndex}."
-				},
 				"tokenURI(uint256)": {
-					"details": "See {IERC721Metadata-tokenURI}."
-				},
-				"totalSupply()": {
-					"details": "See {IERC721Enumerable-totalSupply}."
+					"details": "returns the metadata URI for a token based on its assigned rarity"
 				},
 				"transferFrom(address,address,uint256)": {
 					"details": "See {IERC721-transferFrom}."
@@ -1138,23 +1080,11 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {
-				"MINT_PRICE_ETH()": {
-					"notice": "cost to mint in ETH"
-				},
-				"MINT_PRICE_USDT()": {
-					"notice": "cost to mint in USDT (assumes USDT has 6 decimals)"
-				},
-				"addRarity(string,uint256)": {
-					"notice": "add a new rarity class"
-				},
 				"mintWithETH()": {
-					"notice": "Mint by paying 0.5 ETH"
+					"notice": "Mint multiple by sending ETH (0.5 ETH per NFT)"
 				},
-				"mintWithUSDT()": {
-					"notice": "Mint by paying 1000 USDT"
-				},
-				"updateRarity(uint256,string,uint256)": {
-					"notice": "tweak an existing rarity"
+				"mintWithUSDT(uint256)": {
+					"notice": "Mint multiple by sending USDT (1 000 USDT per NFT)"
 				},
 				"withdrawETH(address)": {
 					"notice": "Withdraw collected ETH"
@@ -1228,22 +1158,6 @@
 			"urls": [
 				"bzz-raw://78586466c424f076c6a2a551d848cfbe3f7c49e723830807598484a1047b3b34",
 				"dweb:/ipfs/Qmb717ovcFxm7qgNKEShiV6M9SPR3v1qnNpAGH84D6w29p"
-			]
-		},
-		"@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
-			"keccak256": "0x5191f783af281c75b7de0f1e3e36cdc6ac5cb2358d929584c4953fd02fa2b5eb",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://d3ca2689d95ba45e297e55c8f71112e3ccec701d0087cb5e1c6ecb1b9ce86f00",
-				"dweb:/ipfs/QmNQ5xKxJpF9k7AahnmJYvg5XeGSYtRig2Lp2WHmWXyBze"
-			]
-		},
-		"@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
-			"keccak256": "0x3d6954a93ac198a2ffa384fa58ccf18e7e235263e051a394328002eff4e073de",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://1f58c799bd939d3951c94893e83ef86acd56989d1d7db7f9d180c515e29e28ff",
-				"dweb:/ipfs/QmTgAxHAAys4kq9ZfU9YB24MWYoHLGAKSxnYUigPFrNW7g"
 			]
 		},
 		"@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
@@ -1343,11 +1257,11 @@
 			]
 		},
 		"contracts/DuelNft.sol": {
-			"keccak256": "0x76073f0762cf3d85d4467804aeb45d20b7bf868a9e4104e9b967ba85d5b49777",
+			"keccak256": "0xf07aaabf595591a56769dfb4ea1dc34a7b50322f5557c46a46660b7ce2ec7d8c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e16f6edadff4d4fcedc7c29d7a9dcf0a53a8f8f239065ab31d9092d85432aa3b",
-				"dweb:/ipfs/QmYKiNZe9VK6MTBPGmGzP3EqVjz3dG6ysgLvd2bPMzzh9y"
+				"bzz-raw://c5c9404b15d67dd3789c8177f0f57b69f1b1bbcd2c1cbcb58729b43a3f1934ef",
+				"dweb:/ipfs/QmdmcA7BVuASBNypfs26idu8B49i5XsjfPgryP1nSEpnoN"
 			]
 		}
 	},
